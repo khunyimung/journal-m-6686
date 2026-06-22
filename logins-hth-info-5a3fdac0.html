@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hth.com · 产品说明与可信访问指引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f4f6fa;
+            color: #1a1c24;
+            line-height: 1.65;
+        }
+
+        /* 深色头图 hero */
+        .hero {
+            background: linear-gradient(135deg, #0f1b2b 0%, #1b2a3f 60%, #24374e 100%);
+            color: #eef2f6;
+            padding: 4.5rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #b5c8db;
+            max-width: 640px;
+            margin: 0 auto 0.5rem;
+        }
+
+        .hero .tag {
+            display: inline-block;
+            margin-top: 1.2rem;
+            padding: 0.45rem 1.2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #cddbe9;
+            letter-spacing: 0.4px;
+        }
+
+        /* 正文区——浅色卡片式内容 */
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+            padding: 2.8rem 1.8rem 4rem;
+        }
+
+        .intro-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 2.2rem 2.5rem;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            margin-bottom: 2.2rem;
+        }
+
+        .intro-card h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #17212e;
+            border-left: 4px solid #2e6c9e;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .intro-card p {
+            margin-bottom: 1.1rem;
+            color: #2a3343;
+        }
+
+        .intro-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .highlight-item {
+            background: #f0f4fc;
+            border-radius: 14px;
+            padding: 1.4rem 1.2rem;
+            transition: background 0.2s;
+        }
+
+        .highlight-item h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1a2c3f;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-item p {
+            font-size: 0.95rem;
+            color: #3b4a5e;
+            margin-bottom: 0;
+        }
+
+        .usage-section {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            margin-bottom: 2.2rem;
+        }
+
+        .usage-section h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #17212e;
+            margin-bottom: 1.2rem;
+        }
+
+        .usage-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .usage-list li {
+            padding: 0.6rem 0 0.6rem 1.8rem;
+            position: relative;
+            color: #2a3343;
+            border-bottom: 1px solid #edf1f7;
+        }
+
+        .usage-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.2rem;
+            color: #2e6c9e;
+            font-weight: 700;
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+
+        .usage-list li:last-child {
+            border-bottom: none;
+        }
+
+        .faq-compact {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            margin-bottom: 2.2rem;
+        }
+
+        .faq-compact h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #17212e;
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            color: #1e2c3d;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-answer {
+            color: #3f4d62;
+            font-size: 0.95rem;
+            padding-left: 0.4rem;
+        }
+
+        .note-box {
+            background: #eaf0f9;
+            border-left: 4px solid #2e6c9e;
+            border-radius: 0 12px 12px 0;
+            padding: 1rem 1.6rem;
+            margin: 1.8rem 0 0.8rem;
+            font-size: 0.95rem;
+            color: #1e2f41;
+        }
+
+        .note-box strong {
+            color: #184a6e;
+        }
+
+        /* 强调色链接 */
+        a {
+            color: #226799;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border 0.2s, color 0.2s;
+            font-weight: 450;
+        }
+
+        a:hover {
+            color: #0b3b5a;
+            border-bottom: 1px solid #226799;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 3.2rem 1.2rem 3rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .container {
+                padding: 1.8rem 1rem 3rem;
+            }
+            .intro-card,
+            .usage-section,
+            .faq-compact {
+                padding: 1.5rem 1.2rem;
+            }
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-note {
+            text-align: center;
+            color: #6a7b8e;
+            font-size: 0.85rem;
+            padding: 1.2rem 0 2.5rem;
+            border-top: 1px solid #dce3ed;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>hth.com · 产品概要</h1>
+        <p class="sub">一个面向信息聚合与身份验证场景的稳定站点，聚焦简洁流程与基础可信操作。</p>
+        <span class="tag">服务说明 · 可信访问指引</span>
+    </header>
+
+    <div class="container">
+
+        <!-- 摘要与定位 -->
+        <div class="intro-card">
+            <h2>站点概述</h2>
+            <p><strong>hth.com</strong> 定位于提供统一入口式的账户相关服务与基础身份核验能力，面向有常规登录、信息绑定及轻量权限管理需求的用户。站点以模块化交互为设计原则，力求降低操作成本，同时保持对数据传输与访问环境的基本要求。</p>
+            <p>平台不预设任何超出常规网络服务的承诺，所有功能均基于标准协议与公开接口。建议新用户在使用前先阅读站点内置的帮助说明及权限须知，以便对操作流程有完整预期。</p>
+        </div>
+
+        <!-- 亮点卡片 -->
+        <div class="highlight-grid">
+            <div class="highlight-item">
+                <h3>轻量化流程</h3>
+                <p>核心步骤控制在 3 个交互以内，减少冗余跳转与表单字段，聚焦必要信息。</p>
+            </div>
+            <div class="highlight-item">
+                <h3>环境适配</h3>
+                <p>页面布局遵循响应式设计，在桌面及移动浏览器中均可保持基础可读性与操作可达性。</p>
+            </div>
+            <div class="highlight-item">
+                <h3>常规加密支持</h3>
+                <p>通信过程使用 TLS 加密，账号相关操作建议在私人网络环境下进行。</p>
+            </div>
+            <div class="highlight-item">
+                <h3>文档引导</h3>
+                <p>站点内提供分步骤说明与常见状态码释义，辅助用户理解返回信息。</p>
+            </div>
+        </div>
+
+        <!-- 使用建议 (场景) -->
+        <div class="usage-section">
+            <h2>适用场景及建议</h2>
+            <ul class="usage-list">
+                <li>需要快速完成常规身份校验或关联账号绑定的个人用户，建议优先使用最新版浏览器。</li>
+                <li>团队或小规模组织进行成员基础权限分配时，可通过站点内的管理面板进行设置，定期检查授权列表。</li>
+                <li>在公共设备上操作后，请务必手动退出并清除临时会话数据，避免凭据残留。</li>
+                <li>如遇到页面加载异常或流程中断，可先检查本地网络与防火墙设置，或参考站点状态页获取恢复指引。</li>
+                <li>定期更换高强度密码，并避免在不同平台复用同一凭据，可以降低信息泄露风险。</li>
+            </ul>
+        </div>
+
+        <!-- FAQ 摘要 + 可信说明 -->
+        <div class="faq-compact">
+            <h2>常见问题摘要</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">访问 <a href="https://logins-hth.com">hth.com</a> 时是否需要注册？</div>
+                <div class="faq-answer">部分基础查询功能可直接使用；涉及账户数据修改或敏感信息查看时，通常需要注册并验证身份。具体要求以页面提示为准。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">站点是否收集额外的个人信息？</div>
+                <div class="faq-answer">仅收集实现服务所必需的最小字段（如账户名、加密凭证等），具体范围在相应页面的隐私说明中有详细列举。不进行被动追踪或数据转售。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">遇到连接失败或长时间无响应应如何处理？</div>
+                <div class="faq-answer">建议先刷新页面或更换网络环境。若问题持续，可等待 15–30 分钟后重试，部分临时故障会在服务端自动恢复。</div>
+            </div>
+
+            <div class="note-box">
+                <strong>可信访问说明：</strong> 我们建议始终通过浏览器地址栏直接输入 <a href="https://logins-hth.com">hth.com</a> 的完整域名访问，避免使用非官方的聚合链接或第三方重定向，以降低中间人攻击或仿冒页面的风险。站点不会通过非正常渠道要求用户提供私密凭据。
+            </div>
+        </div>
+
+        <div class="footer-note">
+            hth.com · 产品介绍与访问指引 · 信息更新于 2025 年
+        </div>
+
+    </div>
+
+</body>
+</html>
