@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MK体育 · 资料索引与信息整理</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f8f6f0;
+      font-family: "Palatino Linotype", "Noto Serif SC", "Source Han Serif SC", Georgia, "Times New Roman", serif;
+      color: #2c2c2c;
+      line-height: 1.75;
+      padding: 2rem 1.2rem;
+    }
+    .page {
+      max-width: 840px;
+      margin: 0 auto;
+      background: #fefcf6;
+      padding: 3rem 2.5rem;
+      border-radius: 2px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.03), 0 1px 2px rgba(0,0,0,0.02);
+    }
+    @media (max-width: 600px) {
+      .page { padding: 2rem 1.2rem; }
+      body { padding: 1rem; }
+    }
+
+    /* 标题体系 */
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+      color: #3d392f;
+      border-left: 5px solid #b7a68b;
+      padding-left: 1.2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 2.2rem 0 0.75rem 0;
+      color: #4a453c;
+      border-bottom: 1px solid #e2dacb;
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 1.8rem 0 0.5rem 0;
+      color: #5b5448;
+    }
+    .subhead {
+      font-size: 0.95rem;
+      color: #8c8476;
+      margin-bottom: 2rem;
+      letter-spacing: 0.3px;
+      padding-left: 1.8rem;
+    }
+
+    /* 段落与引用 */
+    p {
+      margin: 1rem 0;
+      text-align: justify;
+    }
+    .intro-paragraph {
+      font-size: 1.05rem;
+    }
+    .pull-quote {
+      background: #efebe2;
+      border-left: 4px solid #b7a68b;
+      margin: 1.8rem 0;
+      padding: 1.2rem 1.6rem;
+      font-style: normal;
+      color: #3a362e;
+      border-radius: 0 4px 4px 0;
+    }
+    .pull-quote p {
+      margin: 0.3rem 0;
+    }
+    .pull-quote .cite {
+      display: block;
+      margin-top: 0.4rem;
+      font-size: 0.9rem;
+      color: #7a7264;
+      font-style: normal;
+    }
+    .info-box {
+      background: #f5f1ea;
+      border: 1px solid #ddd6c7;
+      padding: 1.2rem 1.5rem;
+      margin: 1.8rem 0;
+      border-radius: 2px;
+      font-size: 0.95rem;
+    }
+    .info-box strong {
+      color: #4f483c;
+    }
+
+    /* 目录感网格 */
+    .index-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+      margin: 2rem 0 1rem 0;
+    }
+    @media (max-width: 550px) {
+      .index-grid { grid-template-columns: 1fr; }
+    }
+    .index-card {
+      background: #faf8f2;
+      border: 1px solid #e7e0d3;
+      padding: 1.5rem 1.4rem;
+      border-radius: 2px;
+      transition: background 0.15s;
+    }
+    .index-card:hover {
+      background: #f3efe7;
+    }
+    .index-card h4 {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #4f483c;
+      margin-bottom: 0.45rem;
+      letter-spacing: 0.3px;
+    }
+    .index-card p {
+      margin: 0.3rem 0;
+      font-size: 0.92rem;
+      color: #5b5346;
+    }
+    .index-card .tag {
+      display: inline-block;
+      background: #dcd3c2;
+      color: #322e26;
+      font-size: 0.72rem;
+      padding: 0.1rem 0.6rem;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
+      margin-top: 0.3rem;
+    }
+
+    /* 列表 */
+    ul, ol {
+      margin: 0.8rem 0 0.8rem 1.4rem;
+    }
+    li {
+      margin: 0.3rem 0;
+    }
+    .faq-list {
+      margin: 1.2rem 0;
+    }
+    .faq-item {
+      margin: 0.9rem 0;
+    }
+    .faq-q {
+      font-weight: 500;
+      color: #4f483c;
+      margin-bottom: 0.2rem;
+    }
+    .faq-a {
+      color: #4a453c;
+      padding-left: 1rem;
+      border-left: 2px solid #dcd3c2;
+    }
+
+    /* 链接 */
+    a {
+      color: #6f614d;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 0.5px;
+      text-decoration-color: #c6bba8;
+    }
+    a:hover {
+      color: #3a2f22;
+      text-decoration-color: #6f614d;
+    }
+
+    /* 底边 */
+    .footnote {
+      margin-top: 3rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e2dacb;
+      font-size: 0.85rem;
+      color: #8c8476;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <h1>MK体育 · 资料索引</h1>
+  <div class="subhead">信息整理 · 分类摘要 · 知识库入口</div>
+
+  <p class="intro-paragraph">
+    本文档是围绕 <a href="https://siteapp-mksports.com">MK体育</a> 相关内容所整理的资料性索引页，旨在以目录化的方式呈现信息架构，帮助有需要的读者快速定位感兴趣的领域。内容均来自公开可查的素材，经结构化梳理后形成以下模块，供参考查阅。
+  </p>
+
+  <!-- 目录式卡片网格 -->
+  <h2>📂 资料分类索引</h2>
+  <div class="index-grid">
+    <div class="index-card">
+      <h4>赛事与项目</h4>
+      <p>主流联赛、杯赛及单项运动的基础规则、历史沿革与赛制变迁。</p>
+      <span class="tag">⚽ 足球 · 🏀 篮球 · 🎾 网球</span>
+    </div>
+    <div class="index-card">
+      <h4>运动科学</h4>
+      <p>训练方法、营养策略、恢复手段与运动损伤预防的文献摘要。</p>
+      <span class="tag">🏋️ 体能 · 🥗 营养 · 🩺 防护</span>
+    </div>
+    <div class="index-card">
+      <h4>观赛指南</h4>
+      <p>不同平台转播信息、赛程检索方式、场馆介绍与观赛礼仪。</p>
+      <span class="tag">📺 转播 · 🏟️ 场馆 · 📅 赛历</span>
+    </div>
+    <div class="index-card">
+      <h4>数据与统计</h4>
+      <p>历史战绩、球员效率值、球队战术模型等定量分析类资料。</p>
+      <span class="tag">📊 进阶数据 · 🧮 模型 · 🏆 荣誉</span>
+    </div>
+  </div>
+
+  <!-- 说明区 -->
+  <h2>📖 资料说明</h2>
+  <p>
+    本索引的所有条目均来源于经过核实的公开信息，不包含未经证实的传闻或主观推测。部分资料在整理过程中参照了多个来源，并尽可能标注参考时间，以确保时效性。对于动态变化的内容（如赛程、实时排名），建议直接查阅对应官方渠道或通过 <a href="https://siteapp-mksports.com">MK体育</a> 获取最新信息。数据类条目一般以最近一个完整赛季为基准，如有重大规则更新则会单独注明。
+  </p>
+  <p>
+    如果你需要深入了解某一具体分支——例如“女子足球职业化发展”或“运动生物力学在投掷项目中的应用”——可以在索引中找到对应关键词，并进一步通过相关链接进入专题页面。每个卡片均可视为一个知识簇的起始节点。
+  </p>
+
+  <!-- 提示区 -->
+  <div class="pull-quote">
+    <p>💡 提示：本页为静态资料索引，不提供即时比分、直播或投注服务。所有运动数据仅供学习与交流，请以官方发布为准。</p>
+    <span class="cite">—— 信息整理建议：交叉对比不同来源</span>
+  </div>
+
+  <!-- 相关信息区 + 精简FAQ -->
+  <h2>🔍 相关信息与常见问题摘要</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">Q1: 如何查找某支球队的历史交锋记录？</div>
+      <div class="faq-a">可在“数据与统计”条目下检索历史对阵数据集，部分平台提供可视化对比工具。也可通过 <a href="https://siteapp-mksports.com">MK体育</a> 的数据库查询过往赛季的交手成绩。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q2: 运动科学类资料是否有专业门槛？</div>
+      <div class="faq-a">索引中收录的内容已经过通俗化处理，适合体育爱好者、初级教练员及跨学科读者。如需原始论文或专业标准，可参考各条目末尾的引用链接。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q3: 赛程与转播信息多久更新一次？</div>
+      <div class="faq-a">本索引每赛季初进行一次结构性更新，联赛进行期间如有重大调整会补充备注。最及时的变更请直接关注各赛事官方公告或 <a href="https://siteapp-mksports.com">MK体育</a> 的赛事板块。</div>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <strong>📌 信息架构提示：</strong> 本页面采用“卡片索引 + 分类说明 + 问答摘要”的组合结构，适合作为知识库的静态入口。后续可沿每个卡片主题延伸出二级页面，例如“运动科学”下设训练周期、营养策略、恢复技术等子目录，形成可扩展的资料树。
+  </div>
+
+  <!-- 附加段落：承接与过渡 -->
+  <p>
+    以上分类基于内容属性进行了初步划分，实际查阅时可能遇到跨类别内容（例如“足球赛事中的运动科学应用”）。建议同时浏览相邻卡片，以获得更完整的上下文。若发现信息缺口或更新需求，欢迎通过相关渠道提交反馈，帮助完善这份资料索引。
+  </p>
+
+  <div class="footnote">
+    资料整理日期：2025 · 版本索引 v1.2 · 静态介绍页 · 无动态功能
+  </div>
+</div>
+</body>
+</html>
